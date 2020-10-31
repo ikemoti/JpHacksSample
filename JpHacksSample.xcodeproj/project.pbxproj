@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		0EAF09A3254D312000202264 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EAF09A1254D312000202264 /* LaunchScreen.storyboard */; };
 		0EAF09AE254D312100202264 /* JpHacksSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAF09AD254D312100202264 /* JpHacksSampleTests.swift */; };
 		0EAF09B9254D312100202264 /* JpHacksSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAF09B8254D312100202264 /* JpHacksSampleUITests.swift */; };
+		0EAF09CB254D31C700202264 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0EAF09CA254D31C700202264 /* MessageKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EAF09CB254D31C700202264 /* MessageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +146,9 @@
 			dependencies = (
 			);
 			name = JpHacksSample;
+			packageProductDependencies = (
+				0EAF09CA254D31C700202264 /* MessageKit */,
+			);
 			productName = JpHacksSample;
 			productReference = 0EAF0993254D311C00202264 /* JpHacksSample.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 0EAF098A254D311B00202264;
+			packageReferences = (
+				0EAF09C9254D31C700202264 /* XCRemoteSwiftPackageReference "MessageKit" */,
+			);
 			productRefGroup = 0EAF0994254D311C00202264 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -587,6 +595,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0EAF09C9254D31C700202264 /* XCRemoteSwiftPackageReference "MessageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MessageKit/MessageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.4.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0EAF09CA254D31C700202264 /* MessageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0EAF09C9254D31C700202264 /* XCRemoteSwiftPackageReference "MessageKit" */;
+			productName = MessageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0EAF098B254D311B00202264 /* Project object */;
 }

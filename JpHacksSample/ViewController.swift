@@ -6,12 +6,45 @@
 //
 
 import UIKit
+import MessageKit
+import Messages
+import MessageUI
 
-class ViewController: UIViewController {
+struct Message: MessageType {
+    var sender: SenderType
+    
 
+    /// 必須
+   var messageId: String
+   var sentDate: Date
+   var kind: MessageKind
+
+   /// 必須ではない
+   var userImagePath: String
+}
+
+class ViewController: MessagesViewController, MessagesDataSource, MessagesLayoutDelegate, MessagesDisplayDelegate, MessageCellDelegate {
+    func currentSender() -> SenderType {
+        <#code#>
+    }
+    
+    func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {
+        <#code#>
+    }
+    
+    func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
+        <#code#>
+    }
+    
+    var messages: [Message] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+       
+        messagesCollectionView.messagesDataSource = self
+             messagesCollectionView.messagesLayoutDelegate = self
+             messagesCollectionView.messagesDisplayDelegate = self
+             messagesCollectionView.messageCellDelegate = self
+
     }
 
 
